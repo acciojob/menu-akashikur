@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import dishesData from "../dishesData"; // Import your dish data
-
+import Dish from "./Dish";
 const Menu = () => {
   const [category, setCategory] = useState("all");
   const [dishes, setDishes] = useState(dishesData);
@@ -38,18 +38,6 @@ const Menu = () => {
           <Dish key={dish.id} dish={dish} />
         ))}
       </div>
-    </div>
-  );
-};
-
-const Dish = ({ dish }) => {
-  const { title, category, price, img, desc } = dish;
-  return (
-    <div className="dish">
-      <img src={img} alt={title} />
-      <h3>{title}</h3>
-      <p>{desc}</p>
-      <p>${price}</p>
     </div>
   );
 };
