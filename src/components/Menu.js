@@ -19,10 +19,18 @@ const Menu = () => {
   return (
     <div>
       {/* Category buttons */}
-      <button onClick={() => filterDishes("all")}>All</button>
-      <button onClick={() => filterDishes("breakfast")}>Breakfast</button>
-      <button onClick={() => filterDishes("lunch")}>Lunch</button>
-      <button onClick={() => filterDishes("shakes")}>Shakes</button>
+      <button id="main" onClick={() => filterDishes("all")}>
+        All
+      </button>
+      <button id="filter-btn-1" onClick={() => filterDishes("breakfast")}>
+        Breakfast
+      </button>
+      <button id="filter-btn-2" onClick={() => filterDishes("lunch")}>
+        Lunch
+      </button>
+      <button id="filter-btn-3" onClick={() => filterDishes("shakes")}>
+        Shakes
+      </button>
 
       {/* Display dishes */}
       <div className="dishes">
